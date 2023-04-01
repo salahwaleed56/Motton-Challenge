@@ -20,7 +20,7 @@ class ViewController: UIViewController {
             guard let self = self else {return}
             guard let result = result else {return }
             self.unsplash = result
-            print(self.unsplash)
+            
             DispatchQueue.main.async {
                 self.photosCV.reloadData()
             }
