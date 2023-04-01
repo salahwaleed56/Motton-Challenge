@@ -67,4 +67,13 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if UIDevice.current.userInterfaceIdiom == .pad{
+            return CGSize(width: photosCV.frame.width / 2 , height: photosCV.frame.height/3.1)
+            
+        }else{
+            return CGSize(width: photosCV.frame.width / 2.4 , height: photosCV.frame.height/3.4)
+            }
+    }
 }
